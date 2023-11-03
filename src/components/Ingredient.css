@@ -1,0 +1,171 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #252b48;
+  font-family: monospace;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+.header {
+  display: flex;
+  font-size: 3rem;
+  font-weight: bold;
+  margin-bottom: 1.25rem;
+  color: #333;
+  text-align: center;
+  font-family: Impact, Haettenschweiler, "Franklin Gothic Bold", Charcoal,
+    "Helvetica Inserat", "Bitstream Vera Sans Bold", "Arial Black", "sans serif";
+  font-style: normal;
+  font-variant: normal;
+  font-weight: 700;
+  line-height: 26.4px;
+  color: antiquewhite;
+  padding-bottom: 2rem;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  background-color: #445069;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  color: #f7e987;
+}
+
+.input-container {
+  width: 100%;
+  margin-bottom: 15px;
+}
+li {
+  font-family: monospace;
+}
+
+.input-label {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  color: #fbceb1;
+  font-family: monospace;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1rem;
+}
+
+.submit-button {
+  background-color: #6e8573;
+  color: #ffffff;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background-color 0.2s ease-in-out;
+}
+
+.submit-button:hover {
+  background-color: #000b18;
+}
+
+.results {
+  margin-top: 30px;
+  display: grid;
+  background-color: #252b48;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.recipe {
+  background-color: #5b9a8b;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+}
+
+.recipe-title {
+  font-size: 2rem;
+  font-weight: bolder;
+  margin: 10px;
+  color: #333;
+  font-family: monospace;
+  text-transform: uppercase;
+}
+
+.recipe-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  outline-style: auto;
+}
+
+.recipe-details {
+  padding: 15px;
+  text-align: left;
+  align-self: flex-start;
+  background-color: #5b9a8b;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.subheading {
+  font-size: 1.6rem;
+  font-weight: bold;
+  text-align: left;
+  font-family: monospace;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #333;
+  color: #333;
+}
+
+.additional-ingredients {
+  list-style-type: disc;
+  margin-left: 20px;
+  font-size: 1.2rem;
+  color: #fdffae;
+  order: 2;
+}
+
+@media (max-width: 768px) {
+  .form {
+    max-width: 100%;
+  }
+
+  .results {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .recipe {
+    margin-bottom: 20px;
+  }
+
+  .additional-ingredients {
+    order: initial;
+  }
+}
